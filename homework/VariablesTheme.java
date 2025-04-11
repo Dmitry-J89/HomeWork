@@ -40,13 +40,8 @@ public class VariablesTheme {
         System.out.println("2 РАСЧЕТ СТОИМОСТИ ТОВАРА СО СКИДКОЙ\n");
 
         short penPrice = 350;
-        System.out.println("Цена ручки: " + penPrice + " тг.");
-
         short bookPrice = 5000;
-        System.out.println("Цена книги: " + bookPrice + " тг.");
-
         byte totalDiscount = 15;
-        System.out.println("Общаыя скидка %: " + totalDiscount);
 
         // Общая стоимость без скидки
         float totalPrice = penPrice + bookPrice;
