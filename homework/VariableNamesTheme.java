@@ -3,7 +3,7 @@ public class VariableNamesTheme {
 
 
         // 1 РАЗНЫЕ ПЕРЕМЕННЫЕ
-        System.out.println("1 РАЗНЫЕ ПЕРЕМЕННЫЕ");
+        System.out.println("1 РАЗНЫЕ ПЕРЕМЕННЫЕ\n");
 
         // Цифра
         byte digit = 5;
@@ -69,6 +69,10 @@ public class VariableNamesTheme {
         short gameScore = 999;
         System.out.println("Счет в игре " + gameScore);
 
+        // Максимальная длина
+        int maxLength = 1000;
+        System.out.println("Максимальная длина = " + maxLength);
+
         // Пункт меню
         byte menuItem = 1;
         System.out.println("Пункт меню " + menuItem);
@@ -111,12 +115,12 @@ public class VariableNamesTheme {
 
         // Количество чисел в строке
         byte numberCount = 25;
-        System.out.println("Количество чисел в строке " + numberCount);
+        System.out.println("Количество чисел в строке " + numberCount + "\n");
 
 
 
         // 2 BOOLEAN-ПЕРЕМЕННЫЕ
-        System.out.println("2 BOOLEAN-ПЕРЕМЕННЫЕ");
+        System.out.println("2 BOOLEAN-ПЕРЕМЕННЫЕ\n");
 
         // Сотни равны?
         boolean isHundredsEqual = true;
@@ -152,12 +156,12 @@ public class VariableNamesTheme {
 
         // Имеются уникальные строки?
         boolean hasUniqueStrings = false;
-        System.out.println("Имеются уникальные строки? " + hasUniqueStrings);
+        System.out.println("Имеются уникальные строки? " + hasUniqueStrings + "\n");
 
 
 
         // 3 АББРЕВИАТУРЫ
-        System.out.println("3 АББРЕВИАТУРЫ");
+        System.out.println("3 АББРЕВИАТУРЫ\n");
 
         // Старый universally unique identifier
         String oldUuid = "123e4567-e89b-12d3-a456-426614174000";
@@ -185,6 +189,6 @@ public class VariableNamesTheme {
 
         // American standard code for information interchange
         int ascii = 128;
-        System.out.println("Код ASCII " + ascii);
+        System.out.println("Код ASCII " + ascii + "\n");
     }
 }
