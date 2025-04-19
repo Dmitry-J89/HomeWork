@@ -36,10 +36,9 @@ public class CyclesTheme {
         for (int i = max - 1; i > min; i--) {
             System.out.print(i + " ");
         }
-        System.out.println();
 
         // 3 Задание
-        System.out.println("\n3. Вывод реверсивного числа и суммы его цифр\n");
+        System.out.println("\n\n3. Вывод реверсивного числа и суммы его цифр\n");
         int number = 1234;
         int sum = 0;
         System.out.print("Исходное число в обратном порядке: ");
@@ -66,13 +65,12 @@ public class CyclesTheme {
             for (int i = 0; i < 5 - remainder; i++) {
                 System.out.printf("%3d", 0);
             }
-            System.out.println();
         }
 
         // 5 Задание
-        System.out.println("\n5. Проверка количества двоек числа на четность/нечетность\n");
-        int source = 322242292; // Число немного изменено (ДЗ нарушено или нет?)
-        int temp = source;
+        System.out.println("\n\n5. Проверка количества двоек числа на четность/нечетность\n");
+        int targetNumber = 3242592; // Ок, теперь только по заданию, без отклонений!
+        int temp = targetNumber;
         int twosCount = 0;
         while (temp > 0) {
             if (temp % 10 == 2) {
@@ -81,7 +79,7 @@ public class CyclesTheme {
             temp /= 10;
         }
         String parity = (twosCount % 2 == 0) ? "четное" : "нечетное";
-        System.out.println("В " + source + " " + parity + " (" + twosCount + ") количество двоек");
+        System.out.println("В " + targetNumber + " " + parity + " (" + twosCount + ") количество двоек");
 
         // 6 Задание
         System.out.println("\n6. Вывод геометрических фигур\n");
@@ -100,26 +98,27 @@ public class CyclesTheme {
         }
         System.out.println();
 
-        int line = 1;
+        int iteration = 1;
+        int printed = 0;
+        int maxIterations = 5;
+        int currentRowLength = 1;
+
         do {
-            int col = 0;
-            do {
-                System.out.print("$");
-                col++;
-            } while (col < line);
-            System.out.println();
-            line++;
-        } while (line <= 3);
-        line = 2;
-        do {
-            int col = 0;
-            do {
-                System.out.print("$");
-                col++;
-            } while (col < line);
-            System.out.println();
-            line--;
-        } while (line > 0);
+            System.out.print("$");
+            printed++;
+
+            if (printed == currentRowLength) {
+                System.out.println();
+                iteration++;
+                printed = 0;
+
+                if (iteration <= 3) {
+                    currentRowLength++;
+                } else {
+                    currentRowLength--;
+                }
+            }
+        } while (iteration <= maxIterations);
 
         // 7 Задание
         System.out.println("\n7. Вывод ASCII-символов\n");
@@ -137,7 +136,7 @@ public class CyclesTheme {
 
         // 8 Задание
         System.out.println("\n8. Проверка, является ли число палиндромом\n");
-        int original = 12894321; // Число немного изменено (ДЗ нарушено или нет?)
+        int original = 1234321;
         int reversed = 0;
         int copy = original;
         while (copy > 0) {
@@ -152,7 +151,7 @@ public class CyclesTheme {
 
         // 9 Задание
         System.out.println("\n9. Проверка, является ли число счастливым\n");
-        int luckyNumber = 987789;
+        int luckyNumber = 123321;
         int leftSum = 0;
         int rightSum = 0;
         int part = luckyNumber;
