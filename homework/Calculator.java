@@ -3,7 +3,7 @@ public class Calculator {
         int num1 = 2;
         int num2 = 10;
         char sign = '^';
-        int result = 0;
+        int result;
 
         if (sign == '+') {
             result = num1 + num2;
@@ -20,6 +20,9 @@ public class Calculator {
             for (int i = 0; i < num2; i++) {
                 result *= num1;
             }
+         } else {
+            System.out.println("Unknown operator: " + sign);
+            return;
         }
 
         System.out.println(num1 + " " + sign + " " + num2 + " = " + result);
