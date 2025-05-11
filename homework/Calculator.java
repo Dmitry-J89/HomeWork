@@ -1,32 +1,32 @@
 public class Calculator {
 
-    public void calculate(int a, int b, char sign) {
+    public void calculate(int firstNumber, int secondNumber, char sign) {
         switch (sign) {
             case '+':
-                System.out.println("Результат: " + (a + b));
+                System.out.println("Результат: " + (firstNumber + secondNumber));
                 break;
             case '-':
-                System.out.println("Результат: " + (a - b));
+                System.out.println("Результат: " + (firstNumber - secondNumber));
                 break;
             case '*':
-                System.out.println("Результат: " + (a * b));
+                System.out.println("Результат: " + (firstNumber * secondNumber));
                 break;
             case '/':
-                if (b == 0) {
+                if (secondNumber == 0) {
                     System.out.println("Ошибка: деление на ноль запрещено");
                 } else {
-                    System.out.println("Результат: " + (a / b));
+                    System.out.println("Результат: " + (firstNumber / secondNumber));
                 }
                 break;
             case '%':
-                if (b == 0) {
+                if (secondNumber == 0) {
                     System.out.println("Ошибка: деление на ноль запрещено");
                 } else {
-                    System.out.println("Результат: " + (a % b));
+                    System.out.println("Результат: " + (firstNumber % secondNumber));
                 }
                 break;
             case '^':
-                System.out.println("Результат: " + pow(a, b));
+                System.out.println("Результат: " + pow(firstNumber, secondNumber));
                 break;
             default:
                 System.out.println("Ошибка: операция '" + sign + "' не поддерживается");
@@ -38,11 +38,15 @@ public class Calculator {
 
         if (exponent == 0) {
             return 1.0;
-        } else if (exponent > 0) {
+        }
+
+        if (exponent > 0) {
             for (int i = 0; i < exponent; i++) {
                 result *= base;
             }
-        } else {
+        }
+
+        if (exponent < 0) {
             for (int i = 0; i < -exponent; i++) {
                 result *= base;
             }
