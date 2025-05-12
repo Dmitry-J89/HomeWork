@@ -1,25 +1,27 @@
+import java.util.Scanner;
+
 public class GuessNumber {
 
     private Player player1;
     private Player player2;
     private int targetNumber;
+    private Scanner scan = new Scanner(System.in);
 
     public GuessNumber(Player player1, Player player2) {
         this.player1 = player1;
         this.player2 = player2;
     }
 
-    public void play(java.util.Scanner scan) {
+    public void play() {
         targetNumber = (int) (Math.random() * 100) + 1;
 
         Player currentPlayer = player1;
 
         while (true) {
             System.out.print(currentPlayer.getName() + ", введите число: ");
-            int guess = scan.nextInt();
-            currentPlayer.setNumber(guess);
+            currentPlayer.setNumber(scan.nextInt());
 
-            if (guess == targetNumber) {
+            if (currentPlayer.getNumber() == targetNumber) {
                 System.out.println("Поздравляем, " + currentPlayer.getName() + "! Вы угадали число.");
                 break;
             } else {
